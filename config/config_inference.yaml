@@ -1,0 +1,24 @@
+# general settings 
+results_folder_name: CD3_Sameeha_Yaron_ft
+
+# data settings
+test_dataset_path: ../../Data/Test # path to test set folder
+sub_datasets: ['Sameeha_Yaron'] # ['Ofer_PDAC' | 'Noa_NSCLC' | 'Nofar_GVHD' | 'Sameeha' | 'Idan_Melanoma']
+protein: # protein name
+image_normalization: min_max # [min_max | anscombe | False]
+
+# model settings
+model_type: AttUNet # [UNet | R2UNet | AttUNet | R2AttUNet | UNet3+]
+model_name: # trained model filename
+confidence_output: False
+center_crop: # Empty for whole image or number of pixels
+
+
+
+
+
+
+
+
+
+

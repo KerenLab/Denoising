@@ -1,0 +1,25 @@
+# general settings
+model_name: denoiser
+W&B_entity: # insert your weights and biases entity
+comment: # Optional: insert short description of your model
+seed: # [empty | num in (0, 2 ** 32)], Leave empty for random seed or set a number
+
+# data settings
+protein: # [protein_name | general_denoiser]
+train_dataset_path: 
+validation_dataset_path: 
+exclude_datasets: [] # [empty | subdataset_folder_name]
+img_normalization: min_max # [min_max | anscombe | False]
+
+
+# decompression masking network settings
+resume_path: # [empty | path to trained model]
+model_type: AttUNet # [UNet | R2UNet | AttUNet | R2AttUNet | UNet3+]
+num_batches: 100000 # set training epochs
+running_time: 11.8 # max training time; checkpoint will be saved before exit
+batch_size: 8 # recommended: 8
+crop_size: 512 # recommended: 464
+lr: 0.0001 # recommended: 0.0001
+loss: BCE # [BCE | Dice]
+validation_frequency: 20 # validation epoch frequency
+save_checkpoint_freq: 5000 # checkpoint frequency
